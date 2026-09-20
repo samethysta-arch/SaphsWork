@@ -1,0 +1,12 @@
+.next
+node_modules
+out
+dist
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# Local source material and internal work notes. The runnable site uses the
+# optimized copies in public/.
+Hyperloop_*.md
+animations/
