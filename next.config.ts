@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  // GitHub Pages resolves /work/ as work/index.html, not work.html.
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
