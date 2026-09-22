@@ -1,17 +1,8 @@
 import PixelLink from "../../components/PixelLink";
+import InteractiveCaseHero from "../../components/InteractiveCaseHero";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const asset = (path: string) => `${basePath}${path}`;
-
-const heroImages = [
-  ["hero-navigation.png", "Navigation screen", "h1"],
-  ["hero-manual.png", "Manual accept screen", "h2"],
-  ["hero-rider.png", "Driver partner", "h3"],
-  ["hero-drivers.png", "Drivers beside a motorcycle", "h4"],
-  ["hero-rear.png", "Driver on the road", "h5"],
-  ["hero-car.png", "Job card in a car", "h6"],
-  ["hero-dashboard.png", "Driver app dashboard", "h7"],
-];
 
 const metrics = [
   ["Effective Acceptance Rate (EAR)", "Whether more dispatched jobs are ultimately accepted; the clearest signal that Default Accept reduces cherry-picking."],
@@ -54,11 +45,7 @@ export default function WorkPage() {
       <div className="rail-bottom"><img src={asset("/work-assets/dal/gitlab.svg")} alt="" /><img src={asset("/work-assets/dal/folder.svg")} alt="" /></div>
     </aside>
 
-    <section className="study-hero" aria-labelledby="case-title">
-      <div className="hero-collage">{heroImages.map(([src, alt, className]) => <img key={src} className={className} src={asset(`/work-assets/hero/${src}`)} alt={alt} />)}</div>
-      <h1 id="case-title">Default Accept</h1><span className="study-rule" /><p>Booking experience design</p>
-      <img className="hero-actions" src={asset("/work-assets/skip-continue.png")} alt="Skip and continue actions" />
-    </section>
+    <InteractiveCaseHero />
 
     <div className="study-shell" id="overview">
       <aside className="study-back"><PixelLink href="/"><img src={asset("/work-assets/dal/arrow-left.svg")} alt="" />Back</PixelLink></aside>
