@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import PixelLink from "./PixelLink";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const asset = (path: string) => `${basePath}${path}`;
+const asset = (path: string) => `${basePath}${path.startsWith("/deck-assets/") ? `/Asset%20Citadel/${path.slice("/deck-assets/".length)}` : path}`;
 
 type SlideKind =
   | "cover" | "archive" | "section" | "people" | "challenge" | "media"
