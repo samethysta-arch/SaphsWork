@@ -1,0 +1,63 @@
+.page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 32px 24px;
+  background: #171717;
+  color: #f7f7f2;
+}
+
+.content {
+  width: min(680px, 100%);
+}
+
+.code {
+  margin: 0 0 20px;
+  color: #17b5a6;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  margin: 0;
+  font-size: clamp(44px, 9vw, 88px);
+  line-height: .98;
+  letter-spacing: -.065em;
+  font-weight: 550;
+}
+
+.message {
+  max-width: 440px;
+  margin: 24px 0 32px;
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.homeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #17b5a6;
+  color: #101010;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.homeLink span {
+  transition: transform .2s ease;
+}
+
+.homeLink:hover span {
+  transform: translate(2px, -2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeLink span {
+    transition: none;
+  }
+}
