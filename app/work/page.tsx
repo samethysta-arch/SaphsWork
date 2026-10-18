@@ -43,10 +43,16 @@ function Steps({ items }: { items: string[][] }) {
 
 export default function WorkPage() {
   return <main className="work-html">
-<InteractiveCaseHero />
+    <aside className="study-rail" aria-label="Case study navigation">
+      <PixelLink href="/" className="study-brand"><img src={asset("/work-assets/dal/dax-avatar.svg")} alt="Portfolio home" /></PixelLink>
+      <nav><a href="#overview">01</a><a href="#design">02</a><a href="#research">03</a><a href="#impact">04</a></nav>
+      <div className="rail-bottom"><img src={asset("/work-assets/dal/gitlab.svg")} alt="" /><img src={asset("/work-assets/dal/folder.svg")} alt="" /></div>
+    </aside>
 
-    <aside className="study-back"><PixelLink href="/"><img src={asset("/work-assets/dal/arrow-left.svg")} alt="" />Back</PixelLink></aside>
+    <InteractiveCaseHero />
+
     <div className="study-shell" id="overview">
+      <aside className="study-back"><PixelLink href="/"><img src={asset("/work-assets/dal/arrow-left.svg")} alt="" />Back</PixelLink></aside>
       <article className="study-content">
         <header><h2>In H2 2026, we introduced new type of Job Card when drivers receiving incoming booking to increase Acceptance Rate.</h2></header>
         <Visual src="/work-assets/job-card-variants.png" alt="Manual, Turbo Auto-Accept and Default Accept job cards" />
