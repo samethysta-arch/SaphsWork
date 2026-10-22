@@ -4,10 +4,10 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const asset = (path: string) => `${basePath}${path}`;
 
 const projects = [
-  { title: "Default Accept", type: "Driver experience", image: asset("/project-covers/allocation-job-card.png"), className: "project-allocation", href: "/work" },
-  { title: "Dax Design Library", type: "Design system", image: asset("/project-covers/dax-design-library.png"), className: "project-dax", href: "/prototype/" },
-  { title: "Pickup and Delivery Photo Validation", type: "Service design", image: asset("/project-covers/pickup-delivery-validation.png"), className: "project-photo-validation", href: "/pickup-delivery-photo-validation/" },
-  { title: "L3 Design Agentic Loop", type: "AI design operations", image: asset("/project-covers/l3-design-agentic-loop.png"), className: "project-agentic", href: "/l3-prototype/" },
+  { title: "Default Accept", type: "Driver experience", image: asset("/project-covers/allocation-job-card.webp"), className: "project-allocation", href: "/work" },
+  { title: "Dax Design Library", type: "Design system", image: asset("/project-covers/dax-design-library.webp"), className: "project-dax", href: "/prototype/" },
+  { title: "Pickup and Delivery Photo Validation", type: "Service design", status: "Under construction", image: asset("/project-covers/pickup-delivery-validation.webp"), className: "project-photo-validation", href: "/pickup-delivery-photo-validation/" },
+  { title: "L3 Design Agentic Loop", type: "AI design operations", image: asset("/project-covers/l3-design-agentic-loop.webp"), className: "project-agentic", href: "/l3-prototype/" },
 ];
 
 const roles = [
@@ -61,7 +61,7 @@ export default function Home() {
     </div></aside>
     <section className="work-wall" aria-label="Selected work">
       <div className="work-heading"><span>Selected work</span><a className="prototype-link" href="/prototype/" style={{ color: "#17b5a6", letterSpacing: 0, textDecoration: "none", textTransform: "none" }}>Try prototype ↗</a><span>2020—2026</span></div>
-      <div className="project-grid">{projects.map((project, index) => <PixelLink className={`project-card ${project.className}`} href={project.href} key={project.title} aria-label={`${project.title}, ${project.type}`}><img src={project.image} alt="" /><div className="project-meta"><span>{String(index + 1).padStart(2, "0")}</span><div><strong>{project.title}</strong><small>{project.type}</small></div><b>↗</b></div></PixelLink>)}</div>
+      <div className="project-grid">{projects.map((project, index) => <PixelLink className={`project-card ${project.className}`} href={project.href} key={project.title} aria-label={`${project.title}, ${project.type}${project.status ? `, ${project.status}` : ""}`}><img src={project.image} alt="" loading={index > 1 ? "lazy" : "eager"} decoding="async" /><div className="project-meta"><span>{String(index + 1).padStart(2, "0")}</span><div><strong>{project.title}</strong><small>{project.type}</small>{project.status && <em className="project-status">{project.status}</em>}</div><b>↗</b></div></PixelLink>)}</div>
       <div className="work-end"><p>More thoughtful work is always in progress.</p><a href="mailto:saphira.amethysta@gmail.com">Let’s work together ↗</a></div>
     </section>
   </main>;

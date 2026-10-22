@@ -4,6 +4,7 @@ import styles from "./prototype.module.css";
 export const metadata: Metadata = {
   title: "Saphira’s Work — Interactive Prototype",
   description: "Explore Saphira Amethysta’s interactive portfolio prototype.",
+  alternates: { canonical: "/prototype/" },
 };
 
 const prototypeUrl = "https://www.figma.com/proto/RX6aJ8A1sKWRV4YfelSgbw/Saphira-s-Work?node-id=1-4397&viewport=-3226%2C-81%2C0.24&t=T0Ko3E43aTTCe9xB-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A4397&page-id=0%3A1&show-proto-sidebar=1";

@@ -4,6 +4,7 @@ import styles from "../prototype/prototype.module.css";
 export const metadata: Metadata = {
   title: "L3 Design Agentic Loop — Interactive Prototype",
   description: "Explore the interactive L3 Design Agentic Loop prototype by Saphira Amethysta.",
+  alternates: { canonical: "/l3-prototype/" },
 };
 
 const prototypeUrl = "https://www.figma.com/proto/RX6aJ8A1sKWRV4YfelSgbw/Saphira-s-Work?page-id=0%3A1&node-id=1-6126&viewport=-3226%2C-81%2C0.24&t=ay3lpMi7IUpmmK9E-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A6126&show-proto-sidebar=0";
