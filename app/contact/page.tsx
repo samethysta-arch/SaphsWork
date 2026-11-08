@@ -1,0 +1,3 @@
+import { PageFrame } from "../../components/FormoChrome";
+export const metadata = { title: "Contact", description: "Contact Saphira Amethysta." };
+export default function ContactPage(){return <PageFrame><main className="formo-page contact-page"><p className="eyebrow">Contact</p><h1>Have a thoughtful project in mind?</h1><p>Make a connection and let’s talk about what we can create together.</p><a className="contact-cta" href="mailto:saphiraamethysta@gmail.com">Email Saphira ↗</a><div className="contact-social"><a href="https://www.linkedin.com/in/saphiraamethysta" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.behance.net/saphiraamethysta" target="_blank" rel="noreferrer">Behance ↗</a></div></main></PageFrame>}

@@ -74,8 +74,6 @@ export default function InteractiveCaseHero() {
       </div>)}
     </div>
     <h1 id="case-title">Default Accept</h1>
-    <span className="study-rule" />
-    <p>Booking experience design</p>
-    <img className="hero-actions" src={`${basePath}/work-assets/skip-continue.png`} alt="Skip and continue actions" />
+    <a className="hero-category" href="/#top">B O O K I N G&nbsp; EXPERIENCE&nbsp; REDESIGN</a>
   </section>;
 }
