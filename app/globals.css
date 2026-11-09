@@ -477,6 +477,7 @@ body{--bg:#fff;--text:#171717;--muted:#777;--line:#e8e8e8;background:#fff;color:
 .work-html #impact .impact-chart{width:min(100%,960px);margin:44px auto 0;border:0;border-radius:0}
 .work-html .study-content :is(h3,h4).numbered-heading{scroll-margin-top:112px}
 .work-html [data-scroll-reveal].scroll-reveal-ready{transform:translate3d(0,24px,0);transition-duration:.62s}
+.work-html [data-scroll-reveal].scroll-reveal-ready.is-revealed{transform:translate3d(0,0,0)}
 @media(max-width:900px){
   .work-html .study-content{width:min(100%,1200px);padding:28px 32px 96px}
   .work-html .case-summary>div{grid-template-columns:minmax(110px,.85fr) minmax(0,1fr);gap:18px}
@@ -513,4 +514,5 @@ body{--bg:#fff;--text:#171717;--muted:#777;--line:#e8e8e8;background:#fff;color:
 }
 @media(prefers-reduced-motion:reduce){
   .work-html [data-scroll-reveal].scroll-reveal-ready{opacity:1;transform:none;transition:none}
+  .work-html [data-scroll-reveal].scroll-reveal-ready.is-revealed{transform:none}
 }
