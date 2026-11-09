@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   },
   description: "Selected product design work by Saphira Amethysta, Product Design Lead based in Singapore.",
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
